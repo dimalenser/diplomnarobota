@@ -169,22 +169,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\background1.png" />
-    <Resource Include="img\background2.png" />
     <Resource Include="img\background2blurMore.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="img\exit.svg" />
-    <Content Include="img\health.svg" />
-    <Content Include="img\home.svg" />
-    <Content Include="img\kpd.svg" />
-    <Content Include="img\login.svg" />
-    <Content Include="img\map.svg" />
-    <Content Include="img\name.svg" />
-    <Content Include="img\password.svg" />
-    <Content Include="img\plod.svg" />
-    <Content Include="img\poroda.svg" />
-    <Content Include="img\surname.svg" />
-    <Content Include="img\years.svg" />
+    <Resource Include="img\exit.png" />
+    <Resource Include="img\health.png" />
+    <Resource Include="img\home.png" />
+    <Resource Include="img\kpd.png" />
+    <Resource Include="img\login.png" />
+    <Resource Include="img\map.png" />
+    <Resource Include="img\name.png" />
+    <Resource Include="img\password.png" />
+    <Resource Include="img\plod.png" />
+    <Resource Include="img\poroda.png" />
+    <Resource Include="img\surname.png" />
+    <Resource Include="img\years.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\background2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

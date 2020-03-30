@@ -7,6 +7,18 @@
         mc:Ignorable="d"
         Title="TreeAdd" Height="768" Width="1366">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background2blurMore.png"></ImageBrush>
+        </Grid.Background>
+        <Border BorderThickness="0" HorizontalAlignment="Left" Height="77" VerticalAlignment="Top" Background="#FF7B9F4B" BorderBrush="White" Width="1358">
+            <Image/>
+        </Border>
+        <Label x:Name="labelTreesList" Content="Переглянути список" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="118,22,0,0" FontFamily="PT Sans" FontSize="22" Foreground="White" Cursor="Hand"/>
+        <Label x:Name="labelTreeAdd" Content="Додати дерево" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="PT Sans" FontSize="22" Foreground="White" Margin="366,22,0,0" Cursor="Hand"/>
+        <Label x:Name="labelTreeMap" Content="Переглянути мапу міста" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="560,22,0,0" FontFamily="PT Sans" FontSize="22" Foreground="White" Cursor="Hand"/>
+        <Image x:Name="homeButton" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="33" Margin="38,25,0,0" Source="img/home.png" Cursor="Hand"/>
+        <Image x:Name="exitButton" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="33" Margin="1298,25,0,0" Source="img/exit.png" Cursor="Hand"/>
+        <Label Content="За сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="366,650,0,0" VerticalAlignment="Top" FontSize="31" Foreground="White" BorderBrush="#FFA2A2A2"/>
+
     </Grid>
 </Window>
