@@ -55,7 +55,45 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="MainWindow.xaml">
+    <Compile Include="Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityCheck.xaml.cs">
+      <DependentUpon>SecurityCheck.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeAdd.xaml.cs">
+      <DependentUpon>TreeAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeAdd_NotAutorized.xaml.cs">
+      <DependentUpon>TreeAdd_NotAutorized.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeMap.xaml.cs">
+      <DependentUpon>TreeMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreeMap_NotAutorized.xaml.cs">
+      <DependentUpon>TreeMap_NotAutorized.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreesList.xaml.cs">
+      <DependentUpon>TreesList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreesList_NotAutorized.xaml.cs">
+      <DependentUpon>TreesList_NotAutorized.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Authorization.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HomePage_NotAutorized.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -63,10 +101,42 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
+    <Compile Include="HomePage_NotAutorized.xaml.cs">
+      <DependentUpon>HomePage_NotAutorized.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SecurityCheck.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreeAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreeAdd_NotAutorized.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreeMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreeMap_NotAutorized.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreesList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreesList_NotAutorized.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -93,6 +163,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\background2blur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\background1.png" />
+    <Resource Include="img\background2.png" />
+    <Resource Include="img\background2blurMore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\exit.svg" />
+    <Content Include="img\health.svg" />
+    <Content Include="img\home.svg" />
+    <Content Include="img\kpd.svg" />
+    <Content Include="img\login.svg" />
+    <Content Include="img\map.svg" />
+    <Content Include="img\name.svg" />
+    <Content Include="img\password.svg" />
+    <Content Include="img\plod.svg" />
+    <Content Include="img\poroda.svg" />
+    <Content Include="img\surname.svg" />
+    <Content Include="img\years.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\
+C:\Users\dimalenser\OneDrive\Документы\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\
 KolomyyaTrees
 none
 false
 DEBUG;TRACE
-C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\App.xaml
-11151548125
-
-61942039180
+C:\Users\dimalenser\OneDrive\Документы\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\App.xaml
+11391467639
+12-1161779605
+16612807309
 13-1505183044
-MainWindow.xaml;
+Authorization.xaml;HomePage.xaml;HomePage_NotAutorized.xaml;Registration.xaml;SecurityCheck.xaml;TreeAdd.xaml;TreeAdd_NotAutorized.xaml;TreeMap.xaml;TreeMap_NotAutorized.xaml;TreesList.xaml;TreesList_NotAutorized.xaml;
 
-True
+False
 
