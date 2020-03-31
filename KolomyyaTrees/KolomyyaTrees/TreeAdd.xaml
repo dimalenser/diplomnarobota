@@ -19,12 +19,19 @@
         <Image x:Name="homeButton" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="33" Margin="38,25,0,0" Source="img/home.png" Cursor="Hand"/>
         <Image x:Name="exitButton" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="33" Margin="1298,25,0,0" Source="img/exit.png" Cursor="Hand"/>
         <Label Content="За сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="366,676,0,0" VerticalAlignment="Top" FontSize="31" Foreground="White" BorderBrush="#FFA2A2A2"/>
-        <TextBox HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="312" Margin="536,121,0,0" Foreground="#FFE0E0E0"/>
-        <TextBox HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,198,0,0" Foreground="#FFE0E0E0"/>
-        <TextBox HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,275,0,0" Foreground="#FFE0E0E0"/>
-        <TextBox HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,352,0,0" Foreground="#FFE0E0E0"/>
-        <TextBox HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,429,0,0" Foreground="#FFE0E0E0"/>
-        <TextBox HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,506,0,0" Foreground="#FFE0E0E0"/>
+        <TextBox HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="312" Margin="536,121,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
+        <TextBox HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,198,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
+        <TextBox HorizontalAlignment="Left" Height="63" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,275,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
+        <TextBox HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,352,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
+        <TextBox HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,429,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
+        <TextBox HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="313" Margin="536,506,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
         <Button x:Name="buttonSignIn" Content="Увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="271" Margin="560,583,0,0" Height="62" Background="#FF7B9F4B" Cursor="Hand" FontSize="37" FontFamily="PT Sans" Foreground="White"/>
+        <RichTextBox HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="420,238,0,0">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
     </Grid>
 </Window>
