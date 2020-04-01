@@ -23,5 +23,37 @@ namespace KolomyyaTrees
         {
             InitializeComponent();
         }
+
+        private void textBoxPoroda_DragEnter(object sender, DragEventArgs e)
+        {
+            //labelTreeAdd.Visibility = Visibility.Visible;
+        }
+
+        private void textBoxPoroda_DragLeave(object sender, DragEventArgs e)
+        {
+            //labelTreeAdd.Visibility = Visibility.Hidden;
+            //labelTreeAdd.Content = "pizda";
+        }
+
+        private void textBoxPoroda_LostFocus(object sender, RoutedEventArgs e)
+        {
+            labelTreeAdd.Visibility = Visibility.Visible;
+        }
+
+        private void textBoxPoroda_MouseLeave(object sender, MouseEventArgs e)
+        {
+            labelTreeAdd.Visibility = Visibility.Hidden;
+            labelTreeAdd.Content = "pizda";
+        }
+
+        private void textBoxPoroda_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textBoxPoroda.Text = "";
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
