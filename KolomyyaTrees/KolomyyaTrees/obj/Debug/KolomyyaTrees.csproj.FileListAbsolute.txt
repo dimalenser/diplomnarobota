@@ -68,3 +68,5 @@ C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\D
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\KolomyyaTrees.csproj.CoreCompileInputs.cache
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\KolomyyaTrees.exe
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\KolomyyaTrees.pdb
+C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\NewWindow.g.cs
+C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\NewWindow.baml
