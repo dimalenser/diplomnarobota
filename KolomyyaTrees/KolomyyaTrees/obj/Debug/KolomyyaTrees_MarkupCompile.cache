@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\App.xaml
-12-1107110123
+12630607339
 
-16-636749385
+161006383192
 13-1505183044
-Authorization.xaml;HomePage.xaml;HomePage_NotAutorized.xaml;NewWindow.xaml;Registration.xaml;SecurityCheck.xaml;TreeAdd.xaml;TreeAdd_NotAutorized.xaml;TreeMap.xaml;TreeMap_NotAutorized.xaml;TreesList.xaml;TreesList_NotAutorized.xaml;
+Authorization.xaml;HomePage.xaml;HomePage_NotAutorized.xaml;MainWindow.xaml;Registration.xaml;SecurityCheck.xaml;TreeAdd.xaml;TreeAdd_NotAutorized.xaml;TreesList.xaml;TreesList_NotAutorized.xaml;TreesMap.xaml;TreesMap_NotAutorized.xaml;
 
 False
 

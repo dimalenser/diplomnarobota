@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{00E29FDD-FFD9-4FEA-92EA-2D23FF5602AA}</ProjectGuid>
+    <ProjectGuid>{52660F8D-77D2-4EA8-BCBB-2257F4CABCC5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>KolomyyaTrees</RootNamespace>
     <AssemblyName>KolomyyaTrees</AssemblyName>
@@ -55,15 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Authorization.xaml.cs">
-      <DependentUpon>Authorization.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="NewWindow.xaml.cs">
-      <DependentUpon>NewWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
@@ -76,17 +67,17 @@
     <Compile Include="TreeAdd_NotAutorized.xaml.cs">
       <DependentUpon>TreeAdd_NotAutorized.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TreeMap.xaml.cs">
-      <DependentUpon>TreeMap.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TreeMap_NotAutorized.xaml.cs">
-      <DependentUpon>TreeMap_NotAutorized.xaml</DependentUpon>
-    </Compile>
     <Compile Include="TreesList.xaml.cs">
       <DependentUpon>TreesList.xaml</DependentUpon>
     </Compile>
     <Compile Include="TreesList_NotAutorized.xaml.cs">
       <DependentUpon>TreesList_NotAutorized.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreesMap.xaml.cs">
+      <DependentUpon>TreesMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TreesMap_NotAutorized.xaml.cs">
+      <DependentUpon>TreesMap_NotAutorized.xaml</DependentUpon>
     </Compile>
     <Page Include="Authorization.xaml">
       <SubType>Designer</SubType>
@@ -97,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HomePage_NotAutorized.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -104,14 +99,19 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Authorization.xaml.cs">
+      <DependentUpon>Authorization.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.xaml.cs">
+      <DependentUpon>HomePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="HomePage_NotAutorized.xaml.cs">
       <DependentUpon>HomePage_NotAutorized.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="NewWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -128,19 +128,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TreeMap.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TreeMap_NotAutorized.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TreesList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TreesList_NotAutorized.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreesMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreesMap_NotAutorized.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -172,28 +172,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="img\background2blur.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="img\background1.png" />
-    <Resource Include="img\background2blurMore.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="img\exit.png" />
-    <Resource Include="img\health.png" />
     <Resource Include="img\home.png" />
     <Resource Include="img\kpd.png" />
     <Resource Include="img\login.png" />
     <Resource Include="img\map.png" />
     <Resource Include="img\name.png" />
     <Resource Include="img\password.png" />
-    <Resource Include="img\plod.png" />
+    <Resource Include="img\plody.png" />
     <Resource Include="img\poroda.png" />
+    <Resource Include="img\stan.png" />
     <Resource Include="img\surname.png" />
     <Resource Include="img\years.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="img\background1.png" />
     <Resource Include="img\background2.png" />
+    <Resource Include="img\background2blur.png" />
+    <Resource Include="img\background2blurMore.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

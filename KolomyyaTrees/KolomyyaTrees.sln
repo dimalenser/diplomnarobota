@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolomyyaTrees", "KolomyyaTrees\KolomyyaTrees.csproj", "{00E29FDD-FFD9-4FEA-92EA-2D23FF5602AA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolomyyaTrees", "KolomyyaTrees\KolomyyaTrees.csproj", "{52660F8D-77D2-4EA8-BCBB-2257F4CABCC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00E29FDD-FFD9-4FEA-92EA-2D23FF5602AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00E29FDD-FFD9-4FEA-92EA-2D23FF5602AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00E29FDD-FFD9-4FEA-92EA-2D23FF5602AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00E29FDD-FFD9-4FEA-92EA-2D23FF5602AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52660F8D-77D2-4EA8-BCBB-2257F4CABCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52660F8D-77D2-4EA8-BCBB-2257F4CABCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52660F8D-77D2-4EA8-BCBB-2257F4CABCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52660F8D-77D2-4EA8-BCBB-2257F4CABCC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {5B6EA084-229F-431C-A512-840A3F1E705B}
+		SolutionGuid = {A51578F3-54A3-4408-AAE9-3E2B98CAA64B}
 	EndGlobalSection
 EndGlobal
