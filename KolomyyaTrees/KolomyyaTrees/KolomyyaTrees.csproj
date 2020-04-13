@@ -191,5 +191,8 @@
     <Resource Include="img\background2blur.png" />
     <Resource Include="img\background2blurMore.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\info.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

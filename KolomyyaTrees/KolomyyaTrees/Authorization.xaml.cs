@@ -63,5 +63,12 @@ namespace KolomyyaTrees
             hmPage.Show();
             Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Registration reg = new Registration();
+            reg.Show();
+            Close();
+        }
     }
 }

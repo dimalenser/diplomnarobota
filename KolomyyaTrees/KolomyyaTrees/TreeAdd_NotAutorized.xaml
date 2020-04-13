@@ -30,15 +30,21 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBox x:Name="textBoxPoroda" HorizontalAlignment="Left" Height="87" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="430" Margin="745,47,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
-            <TextBox HorizontalAlignment="Left" Height="87" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="431" Margin="745,163,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
-            <TextBox HorizontalAlignment="Left" Height="87" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="431" Margin="745,269,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
-            <TextBox HorizontalAlignment="Left" Height="86" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="431" Margin="745,375,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
-            <TextBox HorizontalAlignment="Left" Height="86" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="431" Margin="745,481,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
-            <TextBox HorizontalAlignment="Left" Height="85" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="431" Margin="745,588,0,0" Foreground="#FFE0E0E0" FontSize="25" FontFamily="PT Sans"/>
-            <Button x:Name="buttonSignIn" Content="Увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="777,694,0,0" Height="85" Background="#FF9CA68E" Cursor="Help" FontSize="37" FontFamily="PT Sans" Foreground="White"/>
+            <TextBox x:Name="textBoxYears" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Кількість років" VerticalAlignment="Top" Width="440" Margin="735,51,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" />
+            <TextBox x:Name="textBoxStan" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Стан" VerticalAlignment="Top" Width="440" Margin="735,157,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
+            <TextBox x:Name="textBoxPoroda" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Порода" VerticalAlignment="Top" Width="440" Margin="735,263,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
+            <TextBox x:Name="textBoxPlody" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Плоди" VerticalAlignment="Top" Width="440" Margin="735,369,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
+            <TextBox x:Name="textBoxMap" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Місцезнаходження" VerticalAlignment="Top" Width="440" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
+            <TextBox x:Name="textBoxInfo" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Додаткова інформація" VerticalAlignment="Top" Width="440" Margin="735,582,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
+            <Button x:Name="buttonSignIn" Content="Увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,688,0,0" Height="90" Background="#FF999C95" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White"/>
 
             <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
+            <Image Source="img/years.png" ToolTip="Кількість років, наприклад 22" Height="48" Width="50" Cursor="Help" Margin="-260,69,260,825" />
+            <Image Source="img/stan.png" ToolTip="Стан дерева від 1 до 5, наприклад 5" Height="48" Width="50" Cursor="Help" Margin="671,180,1191,714" />
+            <Image Source="img/poroda.png" ToolTip="Порода дерева, наприклад яблуня" Height="48" Width="50" Cursor="Help" Margin="671,287,1191,607" RenderTransformOrigin="0.503,3.021" />
+            <Image Source="img/plody.png" ToolTip="Плоди, наприклад яблуко" Height="48" Width="50" Cursor="Help" Margin="671,390,1191,504" />
+            <Image Source="img/map.png" ToolTip="Координати, наприклад 1222n 4333e" Height="48" Width="50" Cursor="Help" Margin="671,498,1191,396" />
+            <Image Source="img/info.png" ToolTip="Особливість дерева, наприклад під цим деревом був похований..." Height="48" Width="50" Cursor="Help" Margin="671,605,1191,289" />
         </Grid>
 
     </Grid>

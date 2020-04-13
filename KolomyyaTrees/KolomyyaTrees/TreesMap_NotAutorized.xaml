@@ -31,6 +31,7 @@
 
         <Grid Grid.Row="1">
             <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
+            <Image HorizontalAlignment="Left" Height="617" Margin="289,109,0,0" VerticalAlignment="Top" Width="1359" Source="img/map.png"/>
         </Grid>
 
     </Grid>

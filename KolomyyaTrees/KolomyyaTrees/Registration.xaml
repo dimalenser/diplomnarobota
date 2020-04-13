@@ -9,7 +9,7 @@
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="img/background1.png"></ImageBrush>
+            <ImageBrush ImageSource="img/background2.png"></ImageBrush>
         </Grid.Background>
 
         <Grid.RowDefinitions>
@@ -30,10 +30,19 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <Label Content="Програма для обліку дерев в місті Коломия" HorizontalAlignment="Left" Margin="143,331,0,0" VerticalAlignment="Top" FontSize="43" FontFamily="PT Sans" Foreground="#FF707070"/>
+            <TextBox HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="440" Margin="735,156,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1"/>
+            <TextBox HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="440" Margin="735,262,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1"/>
+            <TextBox HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="440" Margin="735,368,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1"/>
+            <TextBox HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="440" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1"/>
+            <Label Content="Я маю свій обліковий запис, я хочу" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="803,572,0,0" FontFamily="PT sans" Foreground="White" FontSize="15"/>
+            <Button Content="увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Margin="1044,575,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontStyle="Italic" FontFamily="PT sans" Foreground="#FF00D1FF" FontSize="15" Click="Button_Click"/>
+            <Button x:Name="buttonSignIn" Content="Увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,623,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonSignIn_Click"/>
+
             <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
-            <Label Content="Kolomyya" HorizontalAlignment="Left" Margin="212,177,0,0" VerticalAlignment="Top" FontFamily="Impact" Foreground="#FF23574E" FontSize="100"/>
-            <Label Content="Trees" HorizontalAlignment="Left" Margin="606,177,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="100"/>
+            <Image Source="img/name.png" ToolTip="Ім'я наприклад Тарас" Height="48" Width="50" Cursor="Help" Margin="-254,175,254,719" />
+            <Image Source="img/surname.png" ToolTip="Прізвище наприклад Шевченко" Height="48" Width="50" Cursor="Help" Margin="-254,284,254,610" />
+            <Image Source="img/login.png" ToolTip="Логін наприклад taras228" Height="48" Width="50" Cursor="Help" Margin="-254,390,254,504" />
+            <Image Source="img/password.png" ToolTip="Пароль наприклад 228" Height="48" Width="50" Cursor="Help" Margin="-254,499,254,395" />
         </Grid>
 
     </Grid>

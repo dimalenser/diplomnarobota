@@ -26,35 +26,49 @@ namespace KolomyyaTrees
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
-            HomePage hmPage = new HomePage();
-            hmPage.Show();
+            HomePage_NotAutorized hmPageNA = new HomePage_NotAutorized();
+            hmPageNA.Show();
             Close();
         }
 
         private void TreesListButton_Click(object sender, RoutedEventArgs e)
         {
-            TreesList trlist = new TreesList();
-            trlist.Show();
+            TreesList_NotAutorized trlistNA = new TreesList_NotAutorized();
+            trlistNA.Show();
             Close();
         }
 
         private void TreeAddButton_Click(object sender, RoutedEventArgs e)
         {
-            TreeAdd trAdd = new TreeAdd();
-            trAdd.Show();
+            TreeAdd_NotAutorized trAddNA = new TreeAdd_NotAutorized();
+            trAddNA.Show();
             Close();
         }
 
         private void TreesMapButton_Click(object sender, RoutedEventArgs e)
         {
-            TreesMap trMap = new TreesMap();
-            trMap.Show();
+            TreesMap_NotAutorized trMapNA = new TreesMap_NotAutorized();
+            trMapNA.Show();
             Close();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void buttonSignIn_Click(object sender, RoutedEventArgs e)
+        {
+            Authorization auth = new Authorization();
+            auth.Show();
+            Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Authorization auth = new Authorization();
+            auth.Show();
+            Close();
         }
     }
 }
