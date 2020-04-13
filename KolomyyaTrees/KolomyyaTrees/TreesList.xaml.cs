@@ -23,5 +23,38 @@ namespace KolomyyaTrees
         {
             InitializeComponent();
         }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            HomePage hmPage = new HomePage();
+            hmPage.Show();
+            Close();
+        }
+
+        private void TreesListButton_Click(object sender, RoutedEventArgs e)
+        {
+            TreesList trlist = new TreesList();
+            trlist.Show();
+            Close();
+        }
+
+        private void TreeAddButton_Click(object sender, RoutedEventArgs e)
+        {
+            TreeAdd trAdd = new TreeAdd();
+            trAdd.Show();
+            Close();
+        }
+
+        private void TreesMapButton_Click(object sender, RoutedEventArgs e)
+        {
+            TreesMap trMap = new TreesMap();
+            trMap.Show();
+            Close();
+        }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

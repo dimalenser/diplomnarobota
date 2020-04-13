@@ -18,15 +18,15 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0" Background="#FF7A9E4A">
-            <Button x:Name="homeButton" Background="{x:Null}"  Margin="50,28,1807,28" BorderBrush="{x:Null}">
+            <Button x:Name="homeButton" Background="{x:Null}"  Margin="50,28,1807,28" BorderBrush="{x:Null}" Click="homeButton_Click">
                 <Image Source="img/home.png" Height="48" Cursor="Hand" />
             </Button>
-            <Button x:Name="exitButton" Background="{x:Null}"  Margin="1807,28,50,28" BorderBrush="{x:Null}">
+            <Button x:Name="exitButton" Background="{x:Null}"  Margin="1807,28,50,28" BorderBrush="{x:Null}" Click="exitButton_Click">
                 <Image Source="img/exit.png" Height="40" Cursor="Hand" />
             </Button>
-            <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="166,28,1449,28" BorderBrush="{x:Null}" Cursor="Hand"/>
-            <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1191,28" BorderBrush="{x:Null}" Cursor="Hand"/>
-            <Button x:Name="TreesMapButton" Content="Переглянути мапу міста" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="758,28,773,28" BorderBrush="{x:Null}" Cursor="Hand"/>
+            <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="166,28,1449,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
+            <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1191,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
+            <Button x:Name="TreesMapButton" Content="Переглянути мапу міста" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="758,28,773,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesMapButton_Click"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -35,6 +35,7 @@
             <Label Content="Kolomyya" HorizontalAlignment="Left" Margin="212,177,0,0" VerticalAlignment="Top" FontFamily="Impact" Foreground="#FF23574E" FontSize="100"/>
             <Label Content="Trees" HorizontalAlignment="Left" Margin="606,177,0,0" VerticalAlignment="Top" FontFamily="Impact" FontSize="100"/>
         </Grid>
+        <Button x:Name="buttonSignIn" Content="Увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="374" Margin="317,463,0,0" Height="85" Background="#FF7B9F4B" Cursor="Hand" FontSize="37" FontFamily="PT Sans" Foreground="White" Grid.Row="1" Click="buttonSignIn_Click"/>
 
     </Grid>
 </Window>
