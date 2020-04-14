@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +61,29 @@ namespace KolomyyaTrees
 
         private void buttonLogIn_Click(object sender, RoutedEventArgs e)
         {
+            string loginUser = textBoxLogin.Text;
+            string passUser = textBoxPassword.Text;
+
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlDataAdapter adapter = new MySqlDataAdapter();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `users` WHERE `u_login` = @uL AND `u_password` = @uP", db.GetConnection());
+            command.Parameters.Add("@uL", MySqlDbType.VarChar).Value = loginUser;
+            command.Parameters.Add("@uP", MySqlDbType.VarChar).Value = passUser;
+            adapter.SelectCommand = command;
+            adapter.Fill(table);
+
+            if (table.Rows.Count > 0)
+                MessageBox.Show("Вхід виконано успішно, приємного користування");
+            else
+            {
+                MessageBox.Show("Пароль вказано не вірно, або такого користувача не існує");
+                return;
+            }
+
             HomePage hmPage = new HomePage();
             hmPage.Show();
             Close();
