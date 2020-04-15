@@ -24,6 +24,23 @@ namespace KolomyyaTrees
         public TreeAdd()
         {
             InitializeComponent();
+            textBoxYears.Text = "Кількість років";
+            textBoxYears.Foreground = Brushes.LightGray;
+            
+            textBoxStan.Text = "Стан";
+            textBoxStan.Foreground = Brushes.LightGray;
+
+            textBoxPoroda.Text = "Порода";
+            textBoxPoroda.Foreground = Brushes.LightGray;
+
+            textBoxPlody.Text = "Плоди";
+            textBoxPlody.Foreground = Brushes.LightGray;
+
+            textBoxMap.Text = "Місцезнаходження";
+            textBoxMap.Foreground = Brushes.LightGray;
+
+            textBoxInfo.Text = "Додаткова інформація";
+            textBoxInfo.Foreground = Brushes.LightGray;
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -59,8 +76,40 @@ namespace KolomyyaTrees
             Application.Current.Shutdown();
         }
 
-        private void buttonSignIn_Click(object sender, RoutedEventArgs e)
+        private void buttonTreeAdd_Click(object sender, RoutedEventArgs e)
         {
+            if (textBoxYears.Text == "Кількість років")
+            {
+                MessageBox.Show("Введіть вік дерева");
+                return;
+            }
+            if (textBoxStan.Text == "Стан")
+            {
+                MessageBox.Show("Виберіть стан дерева");
+                return;
+            }
+            if (textBoxPoroda.Text == "Порода")
+            {
+                MessageBox.Show("Виберіть породу дерева");
+                return;
+            }
+            if (textBoxPlody.Text == "Плоди")
+            {
+                MessageBox.Show("Виберіть плоди дерева");
+                return;
+            }
+            if (textBoxMap.Text == "Місцезнаходження")
+            {
+                MessageBox.Show("Введіть координати дерева");
+                return;
+            }
+            if (textBoxInfo.Text == "Додаткова інформація")
+            {
+                MessageBox.Show("Введіть додаткову інформацію продерево");
+                return;
+            }
+
+
             DateTime now = DateTime.Today;
             int nowYear = now.Year;
             float age = 0;
@@ -91,6 +140,122 @@ namespace KolomyyaTrees
                 MessageBox.Show("Дерево не було додано в нашу базу даних");
 
             db.closeConnection();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                buttonTreeAdd_Click(this, null);
+            }
+        }
+        private void textBoxYears_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if(textBoxYears.Text == "Кількість років")
+            {
+                textBoxYears.Text = "";
+                textBoxYears.Foreground = Brushes.Black;
+            }
+            
+        }
+
+        private void textBoxYears_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxYears.Text == "")
+            {
+                textBoxYears.Text = "Кількість років";
+                textBoxYears.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxStan_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxStan.Text == "Стан")
+            {
+                textBoxStan.Text = "";
+                textBoxStan.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxStan_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxStan.Text == "")
+            {
+                textBoxStan.Text = "Стан";
+                textBoxStan.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxPoroda_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPoroda.Text == "Порода")
+            {
+                textBoxPoroda.Text = "";
+                textBoxPoroda.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxPoroda_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPoroda.Text == "")
+            {
+                textBoxPoroda.Text = "Порода";
+                textBoxPoroda.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxPlody_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPlody.Text == "Плоди")
+            {
+                textBoxPlody.Text = "";
+                textBoxPlody.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxPlody_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPlody.Text == "")
+            {
+                textBoxPlody.Text = "Плоди";
+                textBoxPlody.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxMap_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxMap.Text == "Місцезнаходження")
+            {
+                textBoxMap.Text = "";
+                textBoxMap.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxMap_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxMap.Text == "")
+            {
+                textBoxMap.Text = "Місцезнаходження";
+                textBoxMap.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxInfo_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxInfo.Text == "Додаткова інформація")
+            {
+                textBoxInfo.Text = "";
+                textBoxInfo.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxInfo_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxInfo.Text == "")
+            {
+                textBoxInfo.Text = "Додаткова інформація";
+                textBoxInfo.Foreground = Brushes.LightGray;
+            }
         }
     }
 }

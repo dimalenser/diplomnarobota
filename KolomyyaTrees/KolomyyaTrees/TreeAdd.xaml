@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KolomyyaTrees"
         mc:Ignorable="d"
         Title="TreeAdd" Height="1080" Width="1920" Background="White"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="img/background2.png"></ImageBrush>
@@ -30,13 +30,13 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBox x:Name="textBoxYears" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Кількість років" VerticalAlignment="Top" Width="440" Margin="735,51,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" />
-            <TextBox x:Name="textBoxStan" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Стан" VerticalAlignment="Top" Width="440" Margin="735,157,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
-            <TextBox x:Name="textBoxPoroda" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Порода" VerticalAlignment="Top" Width="440" Margin="735,263,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
-            <TextBox x:Name="textBoxPlody" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Плоди" VerticalAlignment="Top" Width="440" Margin="735,369,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
-            <TextBox x:Name="textBoxMap" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Місцезнаходження" VerticalAlignment="Top" Width="440" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
-            <TextBox x:Name="textBoxInfo" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Додаткова інформація" VerticalAlignment="Top" Width="440" Margin="735,582,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
-            <Button x:Name="buttonSignIn" Content="Додати дерево" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,688,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonSignIn_Click"/>
+            <TextBox x:Name="textBoxYears" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Кількість років" VerticalAlignment="Top" Width="440" Margin="735,51,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxYears_GotFocus" LostFocus="textBoxYears_LostFocus" />
+            <TextBox x:Name="textBoxStan" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Стан" VerticalAlignment="Top" Width="440" Margin="735,157,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxStan_GotFocus" LostFocus="textBoxStan_LostFocus"/>
+            <TextBox x:Name="textBoxPoroda" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Порода" VerticalAlignment="Top" Width="440" Margin="735,263,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxPoroda_GotFocus" LostFocus="textBoxPoroda_LostFocus"/>
+            <TextBox x:Name="textBoxPlody" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Плоди" VerticalAlignment="Top" Width="440" Margin="735,369,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxPlody_GotFocus" LostFocus="textBoxPlody_LostFocus"/>
+            <TextBox x:Name="textBoxMap" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Місцезнаходження" VerticalAlignment="Top" Width="440" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxMap_GotFocus" LostFocus="textBoxMap_LostFocus"/>
+            <TextBox x:Name="textBoxInfo" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Додаткова інформація" VerticalAlignment="Top" Width="440" Margin="735,582,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxInfo_GotFocus" LostFocus="textBoxInfo_LostFocus"/>
+            <Button x:Name="buttonTreeAdd" Content="Додати дерево" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,688,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonTreeAdd_Click"/>
 
             <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
             <Image Source="img/years.png" ToolTip="Кількість років, наприклад 22" Height="48" Width="50" Cursor="Help" Margin="-260,69,260,825" />
