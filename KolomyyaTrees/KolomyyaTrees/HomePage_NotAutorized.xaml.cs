@@ -24,28 +24,7 @@ namespace KolomyyaTrees
         public HomePage_NotAutorized()
         {
             InitializeComponent();
-            DB db = new DB();
-
-            DataTable table = new DataTable();
-
-            MySqlCommand command = new MySqlCommand("SELECT t_kpd FROM `trees`", db.GetConnection());
-            db.openConnection();
-
-            MySqlDataReader reader = command.ExecuteReader();
-
-            int treeN = 0;
-            float treeCusen = 0;
-            string treeCusenStr;
-            while (reader.Read())
-            {
-                // выводим данные столбцов текущей строки в listBox1
-                treeN++;
-                treeCusenStr = $"{reader[0]}";
-                treeCusen += float.Parse(treeCusenStr);
-            }
-            reader.Close();
-            db.closeConnection();
-            labelTreesKPD.Content = $"До нашої бази даних занесено {treeN - 1} дерев, за сьогодні дерева виробили {treeCusen} грам кисню";
+            labelTreeCountUpdate();
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -86,6 +65,32 @@ namespace KolomyyaTrees
             Authorization sgnIn = new Authorization();
             sgnIn.Show();
             Close();
+        }
+
+        public void labelTreeCountUpdate()
+        {
+            DB db = new DB();
+
+            DataTable table = new DataTable();
+
+            MySqlCommand command = new MySqlCommand("SELECT t_kpd FROM `trees`", db.GetConnection());
+            db.openConnection();
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            int treeN = 0;
+            float treeCusen = 0;
+            string treeCusenStr;
+            while (reader.Read())
+            {
+                // выводим данные столбцов текущей строки в listBox1
+                treeN++;
+                treeCusenStr = $"{reader[0]}";
+                treeCusen += float.Parse(treeCusenStr);
+            }
+            reader.Close();
+            db.closeConnection();
+            labelTreesKPD.Content = $"До нашої бази даних занесено {treeN - 1} дерев";
         }
     }
 }
