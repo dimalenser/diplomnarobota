@@ -24,6 +24,12 @@ namespace KolomyyaTrees
         public Authorization()
         {
             InitializeComponent();
+
+            textBoxLogin.Text = "Логін";
+            textBoxLogin.Foreground = Brushes.LightGray;
+
+            textBoxPassword.Text = "Пароль";
+            textBoxPassword.Foreground = Brushes.LightGray;
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -61,6 +67,17 @@ namespace KolomyyaTrees
 
         private void buttonLogIn_Click(object sender, RoutedEventArgs e)
         {
+            if (textBoxLogin.Text == "Логін")
+            {
+                MessageBox.Show("Введіть логін користувача");
+                return;
+            }
+            if (textBoxPassword.Text == "Пароль")
+            {
+                MessageBox.Show("Введіть пароль користувача");
+                return;
+            }
+
             string loginUser = textBoxLogin.Text;
             string passUser = textBoxPassword.Text;
 
@@ -94,6 +111,50 @@ namespace KolomyyaTrees
             Registration reg = new Registration();
             reg.Show();
             Close();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                buttonLogIn_Click(this, null);
+            }
+        }
+
+        private void textBoxLogin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxLogin.Text == "Логін")
+            {
+                textBoxLogin.Text = "";
+                textBoxLogin.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxLogin_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxLogin.Text == "")
+            {
+                textBoxLogin.Text = "Логін";
+                textBoxLogin.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPassword.Text == "Пароль")
+            {
+                textBoxPassword.Text = "";
+                textBoxPassword.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxPassword_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPassword.Text == "")
+            {
+                textBoxPassword.Text = "Пароль";
+                textBoxPassword.Foreground = Brushes.LightGray;
+            }
         }
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KolomyyaTrees"
         mc:Ignorable="d"
         Title="Authorization" Height="1080" Width="1920" Background="White"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="img/background2.png"></ImageBrush>
@@ -30,8 +30,8 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Логін" VerticalAlignment="Top" Width="440" Margin="735,328,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
-            <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="************" VerticalAlignment="Top" Width="440" Margin="735,435,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans"/>
+            <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Логін" VerticalAlignment="Top" Width="440" Margin="735,328,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxLogin_GotFocus" LostFocus="textBoxLogin_LostFocus"/>
+            <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" Width="440" Margin="735,435,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxPassword_GotFocus" LostFocus="textBoxPassword_LostFocus"/>
             <Image Source="img/password.png" ToolTip="Кількість років, наприклад 22" Height="48" Width="50" Cursor="Help" Margin="671,454,1191,440" />
             <Image Source="img/login.png" ToolTip="Кількість років, наприклад 22" Height="48" Width="50" Cursor="Help" Margin="671,348,1191,546" />
 
