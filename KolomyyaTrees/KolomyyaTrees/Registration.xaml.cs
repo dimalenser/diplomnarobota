@@ -24,6 +24,18 @@ namespace KolomyyaTrees
         public Registration()
         {
             InitializeComponent();
+
+            textBoxName.Text = "Введіть ім'я користувача";
+            textBoxName.Foreground = Brushes.LightGray;
+
+            textBoxSurname.Text = "Введіть прізвище користувача";
+            textBoxSurname.Foreground = Brushes.LightGray;
+
+            textBoxLogin.Text = "Введіть логін користувача";
+            textBoxLogin.Foreground = Brushes.LightGray;
+
+            textBoxPassword.Text = "Введіть пароль користувача";
+            textBoxPassword.Foreground = Brushes.LightGray;
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -59,7 +71,7 @@ namespace KolomyyaTrees
             Application.Current.Shutdown();
         }
 
-        private void buttonSignIn_Click(object sender, RoutedEventArgs e)
+        private void buttonRegistration_Click(object sender, RoutedEventArgs e)
         {
             if (textBoxName.Text == "Введіть ім'я користувача")
             {
@@ -101,19 +113,19 @@ namespace KolomyyaTrees
 
             db.closeConnection();
 
-            /*
-            nameField.Text = "Введіть ім'я користувача";
-            nameField.ForeColor = Color.Gray;
 
-            surnameField.Text = "Введіть прізвище користувача";
-            surnameField.ForeColor = Color.Gray;
+            textBoxName.Text = "Введіть ім'я користувача";
+            textBoxName.Foreground = Brushes.LightGray;
 
-            loginField.Text = "Введіть логін користувача";
-            loginField.ForeColor = Color.Gray;
+            textBoxSurname.Text = "Введіть прізвище користувача";
+            textBoxSurname.Foreground = Brushes.LightGray;
 
-            passField.Text = "Введіть пароль користувача";
-            passField.ForeColor = Color.Gray;
-            */
+            textBoxLogin.Text = "Введіть логін користувача";
+            textBoxLogin.Foreground = Brushes.LightGray;
+
+            textBoxPassword.Text = "Введіть пароль користувача";
+            textBoxPassword.Foreground = Brushes.LightGray;
+
             Authorization auth = new Authorization();
             auth.Show();
             Close();
@@ -121,6 +133,7 @@ namespace KolomyyaTrees
 
         public Boolean isUserExists()
         {
+
             DB db = new DB();
 
             DataTable table = new DataTable();
@@ -150,6 +163,86 @@ namespace KolomyyaTrees
             Authorization auth = new Authorization();
             auth.Show();
             Close();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                buttonRegistration_Click(this, null);
+            }
+        }
+
+        private void textBoxName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxName.Text == "Введіть ім'я користувача")
+            {
+                textBoxName.Text = "";
+                textBoxName.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxName.Text == "")
+            {
+                textBoxName.Text = "Введіть ім'я користувача";
+                textBoxName.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxSurname_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxSurname.Text == "Введіть прізвище користувача")
+            {
+                textBoxSurname.Text = "";
+                textBoxSurname.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxSurname_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxSurname.Text == "")
+            {
+                textBoxSurname.Text = "Введіть прізвище користувача";
+                textBoxSurname.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxLogin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxLogin.Text == "Введіть логін користувача")
+            {
+                textBoxLogin.Text = "";
+                textBoxLogin.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxLogin_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxLogin.Text == "")
+            {
+                textBoxLogin.Text = "Введіть логін користувача";
+                textBoxLogin.Foreground = Brushes.LightGray;
+            }
+        }
+
+        private void textBoxPassword_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPassword.Text == "Введіть пароль користувача")
+            {
+                textBoxPassword.Text = "";
+                textBoxPassword.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxPassword_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxPassword.Text == "")
+            {
+                textBoxPassword.Text = "Введіть пароль користувача";
+                textBoxPassword.Foreground = Brushes.LightGray;
+            }
         }
     }
 }
