@@ -120,13 +120,13 @@ namespace KolomyyaTrees
             age = nowYear - float.Parse(textBoxYears.Text);
 
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `trees` (`t_vik`, `t_stan`, `t_poroda`, `t_plodu`, `t_ne`, `t_kpd`) VALUES (@t_rik, @t_stan, @t_poroda, @t_plodu, @t_NE, @t_KPD)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `trees` (`t_vik`, `t_stan`, `t_poroda`, `t_plodu`, `t_ne`, `t_info`) VALUES (@t_rik, @t_stan, @t_poroda, @t_plodu, @t_NE, @t_info)", db.GetConnection());
             command.Parameters.Add("@t_rik", MySqlDbType.Int32).Value = age;
             command.Parameters.Add("@t_stan", MySqlDbType.VarChar).Value = textBoxStan.Text;
             command.Parameters.Add("@t_poroda", MySqlDbType.VarChar).Value = textBoxPoroda.Text;
             command.Parameters.Add("@t_plodu", MySqlDbType.VarChar).Value = textBoxPlody.Text;
             command.Parameters.Add("@t_NE", MySqlDbType.VarChar).Value = textBoxMap.Text;
-            command.Parameters.Add("@t_KPD", MySqlDbType.Int32).Value = textBoxInfo.Text;
+            command.Parameters.Add("@t_info", MySqlDbType.Text).Value = textBoxInfo.Text;
 
             db.openConnection();
 
@@ -268,20 +268,16 @@ namespace KolomyyaTrees
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_kpd FROM `trees`", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `trees`", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();
 
             int treeN = 0;
-            float treeCusen = 0;
-            string treeCusenStr;
             while (reader.Read())
             {
                 // выводим данные столбцов текущей строки в listBox1
                 treeN++;
-                treeCusenStr = $"{reader[0]}";
-                treeCusen += float.Parse(treeCusenStr);
             }
             reader.Close();
             db.closeConnection();

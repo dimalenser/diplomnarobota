@@ -165,20 +165,16 @@ namespace KolomyyaTrees
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_kpd FROM `trees`", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT * FROM `trees`", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();
 
             int treeN = 0;
-            float treeCusen = 0;
-            string treeCusenStr;
             while (reader.Read())
             {
                 // выводим данные столбцов текущей строки в listBox1
                 treeN++;
-                treeCusenStr = $"{reader[0]}";
-                treeCusen += float.Parse(treeCusenStr);
             }
             reader.Close();
             db.closeConnection();
