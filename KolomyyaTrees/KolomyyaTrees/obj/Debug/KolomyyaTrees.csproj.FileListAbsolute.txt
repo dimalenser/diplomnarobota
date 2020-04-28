@@ -44,3 +44,4 @@ C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\bin\D
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\bin\Debug\MySql.Data.xml
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\bin\Debug\Renci.SshNet.xml
 C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\KolomyyaTrees.csproj.CopyComplete
+C:\Users\diman\Documents\GitHub\diplomnarobota\KolomyyaTrees\KolomyyaTrees\obj\Debug\KolomyyaTrees_Content.g.cs

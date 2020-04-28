@@ -93,7 +93,7 @@ namespace KolomyyaTrees
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_ne, t_info FROM Trees ORDER BY t_id", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionN, t_info FROM Trees ORDER BY t_id", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -112,7 +112,7 @@ namespace KolomyyaTrees
                 age = nowYear - float.Parse(treeVikInStr);
                 // выводим данные столбцов текущей строки в listBox1
                 
-                result.Add(new MyTable(number, age, $"{reader[2].ToString()}", $"{reader[3].ToString()}", $"{reader[4].ToString()}", $"{reader[5].ToString()}", $"{reader[6].ToString()}"));
+                result.Add(new MyTable(number, age, $"{reader[2].ToString()}", $"{reader[3].ToString()}", $"{reader[4].ToString()}", $"{reader[5].ToString()}", $"{reader[6].ToString()}", $"{reader[7].ToString()}"));
             }
             grid.ItemsSource = result;
             reader.Close();

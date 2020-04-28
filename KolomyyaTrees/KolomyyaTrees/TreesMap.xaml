@@ -30,9 +30,14 @@
         </Grid>
 
         <Grid Grid.Row="1">
+
             <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
-            <Image HorizontalAlignment="Left" Height="617" Margin="289,109,0,0" VerticalAlignment="Top" Width="1359" Source="img/map.png"/>
+            <WebBrowser x:Name="TreesMapWB" HorizontalAlignment="Left" Height="757" VerticalAlignment="Top" Width="1821" Margin="44,70,0,0"/>
+            <Button x:Name="BtnAllTrees" Content="Всі" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="45,34,0,0" Height="31" Background="#FF7B9F4B" Cursor="Hand" FontSize="25" FontFamily="PT Sans" Foreground="White" Click="BtnAllTrees_Click" Panel.ZIndex="1" />
+            <Button x:Name="BtnCommonTrees" Content="Прості" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="142,34,0,0" Height="31" Background="#FF7B9F4B" Cursor="Hand" FontSize="25" FontFamily="PT Sans" Foreground="White" Click="BtnCommonTrees_Click" Panel.ZIndex="1" />
+            <Button x:Name="BtnRareTrees" Content="Рідкі" HorizontalAlignment="Left" VerticalAlignment="Top" Width="92" Margin="239,34,0,0" Height="31" Background="#FF7B9F4B" Cursor="Hand" FontSize="25" FontFamily="PT Sans" Foreground="White" Click="BtnRareTrees_Click" Panel.ZIndex="1" />
         </Grid>
+
 
     </Grid>
 </Window>

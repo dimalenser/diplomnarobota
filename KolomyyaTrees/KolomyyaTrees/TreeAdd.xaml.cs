@@ -25,8 +25,14 @@ namespace KolomyyaTrees
         public TreeAdd()
         {
             InitializeComponent();
+            if((bool)GoogleMapsCB.IsChecked == false)
+            {
+                GoogleMapsWB.Visibility = Visibility.Hidden;
+            }
 
             labelTreeCountUpdate();
+
+            GoogleMapsWB.Navigate("https://www.google.com.ua/maps/place/%D0%9A%D0%BE%D0%BB%D0%BE%D0%BC%D1%8B%D1%8F,+%D0%98%D0%B2%D0%B0%D0%BD%D0%BE-%D0%A4%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+78200/@48.5660049,24.9500774,33477m/");
 
             textBoxYears.Text = "Кількість років";
             textBoxYears.Foreground = Brushes.LightGray;
@@ -107,6 +113,13 @@ namespace KolomyyaTrees
                 MessageBox.Show("Введіть координати дерева");
                 return;
             }
+
+            if (textBoxMapE.Text == "Місцезнаходження")
+            {
+                MessageBox.Show("Введіть координати дерева");
+                return;
+            }
+
             if (textBoxInfo.Text == "Додаткова інформація")
             {
                 MessageBox.Show("Введіть додаткову інформацію продерево");
@@ -120,12 +133,13 @@ namespace KolomyyaTrees
             age = nowYear - float.Parse(textBoxYears.Text);
 
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("INSERT INTO `trees` (`t_vik`, `t_stan`, `t_poroda`, `t_plodu`, `t_ne`, `t_info`) VALUES (@t_rik, @t_stan, @t_poroda, @t_plodu, @t_NE, @t_info)", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("INSERT INTO `trees` (`t_vik`, `t_stan`, `t_poroda`, `t_plodu`, `t_positionN`, `t_positionE`, `t_info`) VALUES (@t_rik, @t_stan, @t_poroda, @t_plodu, @t_positionN, @t_positionE, @t_info)", db.GetConnection());
             command.Parameters.Add("@t_rik", MySqlDbType.Int32).Value = age;
             command.Parameters.Add("@t_stan", MySqlDbType.VarChar).Value = textBoxStan.Text;
             command.Parameters.Add("@t_poroda", MySqlDbType.VarChar).Value = textBoxPoroda.Text;
             command.Parameters.Add("@t_plodu", MySqlDbType.VarChar).Value = textBoxPlody.Text;
-            command.Parameters.Add("@t_NE", MySqlDbType.VarChar).Value = textBoxMap.Text;
+            command.Parameters.Add("@@t_positionN", MySqlDbType.VarChar).Value = textBoxMap.Text;
+            command.Parameters.Add("@@t_positionE", MySqlDbType.VarChar).Value = textBoxMapE.Text;
             command.Parameters.Add("@t_info", MySqlDbType.Text).Value = textBoxInfo.Text;
 
             db.openConnection();
@@ -243,6 +257,23 @@ namespace KolomyyaTrees
                 textBoxMap.Foreground = Brushes.LightGray;
             }
         }
+        private void textBoxMapE_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxMapE.Text == "Місцезнаходження")
+            {
+                textBoxMapE.Text = "";
+                textBoxMapE.Foreground = Brushes.Black;
+            }
+        }
+
+        private void textBoxMapE_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textBoxMapE.Text == "")
+            {
+                textBoxMapE.Text = "Місцезнаходження";
+                textBoxMapE.Foreground = Brushes.LightGray;
+            }
+        }
 
         private void textBoxInfo_GotFocus(object sender, RoutedEventArgs e)
         {
@@ -282,6 +313,16 @@ namespace KolomyyaTrees
             reader.Close();
             db.closeConnection();
             labelTreesKPD.Content = $"До нашої бази даних занесено {treeN - 1} дерев";
+        }
+
+        private void GoogleMapsCB_Checked(object sender, RoutedEventArgs e)
+        {
+            GoogleMapsWB.Visibility = Visibility.Visible;
+        }
+
+        private void GoogleMapsCB_Unchecked(object sender, RoutedEventArgs e)
+        {
+            GoogleMapsWB.Visibility = Visibility.Hidden;
         }
     }
 }

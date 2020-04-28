@@ -27,6 +27,7 @@
             <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="166,28,1449,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
             <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1191,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
             <Button x:Name="TreesMapButton" Content="Переглянути мапу міста" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="758,28,773,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesMapButton_Click"/>
+            <CheckBox x:Name="GoogleMapsCB" Content="Включити GoogleMaps" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1512,37,0,0" FontSize="25" Background="White" Checked="GoogleMapsCB_Checked" Unchecked="GoogleMapsCB_Unchecked"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -34,7 +35,8 @@
             <TextBox x:Name="textBoxStan" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Стан" VerticalAlignment="Top" Width="440" Margin="735,157,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxStan_GotFocus" LostFocus="textBoxStan_LostFocus"/>
             <TextBox x:Name="textBoxPoroda" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Порода" VerticalAlignment="Top" Width="440" Margin="735,263,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxPoroda_GotFocus" LostFocus="textBoxPoroda_LostFocus"/>
             <TextBox x:Name="textBoxPlody" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Плоди" VerticalAlignment="Top" Width="440" Margin="735,369,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxPlody_GotFocus" LostFocus="textBoxPlody_LostFocus"/>
-            <TextBox x:Name="textBoxMap" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Місцезнаходження" VerticalAlignment="Top" Width="440" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxMap_GotFocus" LostFocus="textBoxMap_LostFocus"/>
+            <TextBox x:Name="textBoxMap" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Місцезнаходження" VerticalAlignment="Top" Width="218" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxMap_GotFocus" LostFocus="textBoxMap_LostFocus"/>
+            <TextBox x:Name="textBoxMapE" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Місцезнаходження" VerticalAlignment="Top" Width="211" Margin="964,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxMapE_GotFocus" LostFocus="textBoxMapE_LostFocus"/>
             <TextBox x:Name="textBoxInfo" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Додаткова інформація" VerticalAlignment="Top" Width="440" Margin="735,582,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxInfo_GotFocus" LostFocus="textBoxInfo_LostFocus"/>
             <Button x:Name="buttonTreeAdd" Content="Додати дерево" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,688,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonTreeAdd_Click"/>
 
@@ -45,6 +47,8 @@
             <Image Source="img/plody.png" ToolTip="Плоди, наприклад яблуко" Height="48" Width="50" Cursor="Help" Margin="671,390,1191,504" />
             <Image Source="img/map.png" ToolTip="Координати, наприклад 1222n 4333e" Height="48" Width="50" Cursor="Help" Margin="671,498,1191,396" />
             <Image Source="img/info.png" ToolTip="Особливість дерева, наприклад під цим деревом був похований..." Height="48" Width="50" Cursor="Help" Margin="671,605,1191,289" />
+            <WebBrowser x:Name="GoogleMapsWB" HorizontalAlignment="Left" Height="880" VerticalAlignment="Top" Width="1820" Margin="52,10,0,0" />
+
         </Grid>
 
     </Grid>
