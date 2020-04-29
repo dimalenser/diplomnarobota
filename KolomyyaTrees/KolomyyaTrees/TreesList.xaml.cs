@@ -120,15 +120,5 @@ namespace KolomyyaTrees
             
         }
 
-
-        //Получаем данные из таблицы
-        private void grid_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-            /*
-            MyTable path = grid.SelectedItem as MyTable;
-            MessageBox.Show(" ID: " + path.Id + "\n Исполнитель: " + path.Vocalist + "\n Альбом: " + path.Album
-                + "\n Год: " + path.Year);
-            */
-        }
     }
 }

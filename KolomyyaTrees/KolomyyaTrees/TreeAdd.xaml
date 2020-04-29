@@ -40,7 +40,7 @@
             <TextBox x:Name="textBoxInfo" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Додаткова інформація" VerticalAlignment="Top" Width="440" Margin="735,582,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" GotFocus="textBoxInfo_GotFocus" LostFocus="textBoxInfo_LostFocus"/>
             <Button x:Name="buttonTreeAdd" Content="Додати дерево" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,688,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonTreeAdd_Click"/>
 
-            <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
+            <Label x:Name="labelTreesKPD" Content="До нашої бази даних занесено Н дерев" HorizontalAlignment="Left" Margin="586,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans"/>
             <Image Source="img/years.png" ToolTip="Кількість років, наприклад 22" Height="48" Width="50" Cursor="Help" Margin="-260,69,260,825" />
             <Image Source="img/stan.png" ToolTip="Стан дерева від 1 до 5, наприклад 5" Height="48" Width="50" Cursor="Help" Margin="671,180,1191,714" />
             <Image Source="img/poroda.png" ToolTip="Порода дерева, наприклад яблуня" Height="48" Width="50" Cursor="Help" Margin="671,287,1191,607" RenderTransformOrigin="0.503,3.021" />

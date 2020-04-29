@@ -30,8 +30,8 @@
         </Grid>
 
         <Grid Grid.Row="1">
-            <Image HorizontalAlignment="Left" Height="617" Margin="289,109,0,0" VerticalAlignment="Top" Width="1359" Source="img/poroda.png"/>
-            <Label x:Name="labelTreesKPD" Content="До списку додано Н дерев, сьогодні дерева виробили Н грамів кисню" HorizontalAlignment="Left" Margin="439,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans" Grid.Row="1"/>
+            <Label x:Name="labelTreesKPD" Content="До нашої бази даних занесено Н дерев" HorizontalAlignment="Left" Margin="601,825,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans"/>
+            <DataGrid x:Name="grid" HorizontalAlignment="Left" Height="771" Margin="219,56,0,0" VerticalAlignment="Top" Width="1500" Loaded="grid_Loaded"/>
         </Grid>
 
     </Grid>
