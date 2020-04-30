@@ -24,10 +24,9 @@
             <Button x:Name="exitButton" Background="{x:Null}"  Margin="1807,28,50,28" BorderBrush="{x:Null}" Click="exitButton_Click">
                 <Image Source="img/exit.png" Height="40" Cursor="Hand" />
             </Button>
-            <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="166,28,1449,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
-            <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1191,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
+            <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="149,28,1444,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
+            <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1177,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
             <Button x:Name="TreesMapButton" Content="Переглянути мапу міста" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="758,28,773,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesMapButton_Click"/>
-            <CheckBox x:Name="GoogleMapsCB" Content="Включити GoogleMaps" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1512,37,0,0" FontSize="25" Background="White" Checked="GoogleMapsCB_Checked" Unchecked="GoogleMapsCB_Unchecked"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -41,13 +40,12 @@
             <Button x:Name="buttonTreeAdd" Content="Додати дерево" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,688,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonTreeAdd_Click"/>
 
             <Label x:Name="labelTreesKPD" Content="До нашої бази даних занесено Н дерев" HorizontalAlignment="Left" Margin="586,832,0,0" VerticalAlignment="Top" FontSize="40" Foreground="White" BorderBrush="Black" FontFamily="PT Sans"/>
-            <Image Source="img/years.png" ToolTip="Кількість років, наприклад 22" Height="48" Width="50" Cursor="Help" Margin="-260,69,260,825" />
-            <Image Source="img/stan.png" ToolTip="Стан дерева від 1 до 5, наприклад 5" Height="48" Width="50" Cursor="Help" Margin="671,180,1191,714" />
-            <Image Source="img/poroda.png" ToolTip="Порода дерева, наприклад яблуня" Height="48" Width="50" Cursor="Help" Margin="671,287,1191,607" RenderTransformOrigin="0.503,3.021" />
-            <Image Source="img/plody.png" ToolTip="Плоди, наприклад яблуко" Height="48" Width="50" Cursor="Help" Margin="671,390,1191,504" />
-            <Image Source="img/map.png" ToolTip="Координати, наприклад 1222n 4333e" Height="48" Width="50" Cursor="Help" Margin="671,498,1191,396" />
-            <Image Source="img/info.png" ToolTip="Особливість дерева, наприклад під цим деревом був похований..." Height="48" Width="50" Cursor="Help" Margin="671,605,1191,289" />
-            <WebBrowser x:Name="GoogleMapsWB" HorizontalAlignment="Left" Height="880" VerticalAlignment="Top" Width="1820" Margin="52,10,0,0" />
+            <Image Source="img/years.png" ToolTip="Кількість років, наприклад 22" Cursor="Help" Margin="666,65,1187,822" />
+            <Image Source="img/stan.png" ToolTip="Стан дерева від 1 до 5, наприклад 5" Cursor="Help" Margin="667,176,1187,710" />
+            <Image Source="img/poroda.png" ToolTip="Порода дерева, наприклад яблуня" Cursor="Help" Margin="667,283,1187,603" RenderTransformOrigin="0.503,3.021" />
+            <Image Source="img/plody.png" ToolTip="Плоди, наприклад яблуко" Cursor="Help" Margin="666,385,1189,502" />
+            <Image Source="img/map.png" ToolTip="Координати, наприклад 1222n 4333e" Cursor="Help" Margin="665,492,1188,393" />
+            <Image Source="img/info.png" ToolTip="Особливість дерева, наприклад під цим деревом був похований..." Cursor="Help" Margin="666,601,1189,287" />
 
         </Grid>
 

@@ -24,8 +24,8 @@
             <Button x:Name="exitButton" Background="{x:Null}"  Margin="1807,28,50,28" BorderBrush="{x:Null}" Click="exitButton_Click">
                 <Image Source="img/exit.png" Height="40" Cursor="Hand" />
             </Button>
-            <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="166,28,1449,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
-            <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1191,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
+            <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="154,28,1445,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
+            <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1174,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
             <Button x:Name="TreesMapButton" Content="Переглянути мапу міста" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="758,28,773,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesMapButton_Click"/>
         </Grid>
 
@@ -99,7 +99,7 @@
             </TabControl>
             <Button x:Name="buttonSearchTree" Content="Виконати пошук" HorizontalAlignment="Left" VerticalAlignment="Top" Width="304" Margin="678,318,0,0" Height="39" FontSize="24" FontFamily="PT Sans" Background="#FF7B9F4B" Foreground="White" Cursor="Hand" Click="buttonSearchTree_Click"/>
             <DataGrid x:Name="grid" HorizontalAlignment="Left" Height="441" Margin="81,391,0,0" VerticalAlignment="Top" Width="1730" Loaded="grid_Loaded"/>
-            <Label x:Name="labelCommand" Content="SQL команда яка получилась по моїм фільтрам якщо команда " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24"/>
+            <Label x:Name="labelCommand" Content="SQL команда яка получилась по моїм фільтрам якщо команда " HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" FontSize="24" Visibility="Hidden"/>
 
         </Grid>
 
