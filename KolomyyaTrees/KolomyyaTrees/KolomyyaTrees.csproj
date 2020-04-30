@@ -92,6 +92,9 @@
     <Compile Include="TreeAdd_NotAutorized.xaml.cs">
       <DependentUpon>TreeAdd_NotAutorized.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TreeSearch.xaml.cs">
+      <DependentUpon>TreeSearch.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TreesList.xaml.cs">
       <DependentUpon>TreesList.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TreeAdd_NotAutorized.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TreeSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

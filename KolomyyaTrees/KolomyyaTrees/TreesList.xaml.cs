@@ -120,5 +120,11 @@ namespace KolomyyaTrees
             
         }
 
+        private void TreeSearch_Click(object sender, RoutedEventArgs e)
+        {
+            TreeSearch trsearch = new TreeSearch();
+            trsearch.Show();
+            Close();
+        }
     }
 }
