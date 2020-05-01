@@ -129,19 +129,13 @@ namespace KolomyyaTrees
 
         private void TreeUpdateBnt_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void TreeRemoveBnt_Click(object sender, RoutedEventArgs e)
-        {
-            
             DateTime now = DateTime.Today;
             int nowYear = now.Year;
             float age = 0;
             age = nowYear - float.Parse(TreeVikTB.Text);
 
             DB db = new DB();
-            MySqlCommand command = new MySqlCommand("UPDATE `trees` SET `t_vik` = @t_rik, `t_stan` = @t_stan, `t_poroda` = @t_poroda,`t_plodu` = @t_plodu, `t_positionN` = @t_positionN, `t_positionE` = @t_positionE, `t_info` = @t_info WHERE `t_id` = ", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("UPDATE `trees` SET `t_vik` = @t_rik, `t_stan` = @t_stan, `t_poroda` = @t_poroda,`t_plodu` = @t_plodu, `t_positionN` = @t_positionN, `t_positionE` = @t_positionE, `t_info` = @t_info WHERE `t_id` = @t_id", db.GetConnection());
             command.Parameters.Add("@t_id", MySqlDbType.VarChar).Value = TreeIdTB.Text;
             command.Parameters.Add("@t_rik", MySqlDbType.Int32).Value = age;
             command.Parameters.Add("@t_stan", MySqlDbType.VarChar).Value = TreeStanTB.Text;
@@ -151,6 +145,23 @@ namespace KolomyyaTrees
             command.Parameters.Add("@t_positionE", MySqlDbType.VarChar).Value = TreePositionETB.Text;
             command.Parameters.Add("@t_info", MySqlDbType.Text).Value = TreeInfoTB.Text;
 
+            db.openConnection();
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                MessageBox.Show("Дерево успішно додано в нашу базу даних");
+            }
+            else
+                MessageBox.Show("Дерево не було додано в нашу базу даних");
+
+            db.closeConnection();
+        }
+
+        private void TreeRemoveBnt_Click(object sender, RoutedEventArgs e)
+        {
+            DB db = new DB();
+            MySqlCommand command = new MySqlCommand("DELETE FROM `trees` WHERE `t_id` = @t_id", db.GetConnection());
+            command.Parameters.Add("@t_id", MySqlDbType.VarChar).Value = TreeIdTB.Text;
             db.openConnection();
 
             if (command.ExecuteNonQuery() == 1)
