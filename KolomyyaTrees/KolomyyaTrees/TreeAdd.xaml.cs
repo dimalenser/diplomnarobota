@@ -134,8 +134,8 @@ namespace KolomyyaTrees
             command.Parameters.Add("@t_stan", MySqlDbType.VarChar).Value = textBoxStan.Text;
             command.Parameters.Add("@t_poroda", MySqlDbType.VarChar).Value = textBoxPoroda.Text;
             command.Parameters.Add("@t_plodu", MySqlDbType.VarChar).Value = textBoxPlody.Text;
-            command.Parameters.Add("@@t_positionN", MySqlDbType.VarChar).Value = textBoxMap.Text;
-            command.Parameters.Add("@@t_positionE", MySqlDbType.VarChar).Value = textBoxMapE.Text;
+            command.Parameters.Add("@t_positionN", MySqlDbType.VarChar).Value = textBoxMap.Text;
+            command.Parameters.Add("@t_positionE", MySqlDbType.VarChar).Value = textBoxMapE.Text;
             command.Parameters.Add("@t_info", MySqlDbType.Text).Value = textBoxInfo.Text;
 
             db.openConnection();
