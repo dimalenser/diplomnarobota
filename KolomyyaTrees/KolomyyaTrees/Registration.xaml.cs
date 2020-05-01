@@ -34,7 +34,7 @@ namespace KolomyyaTrees
             textBoxLogin.Text = "Введіть логін користувача";
             textBoxLogin.Foreground = Brushes.LightGray;
 
-            textBoxPassword.Text = "Введіть пароль користувача";
+            textBoxPassword.Password = "Введіть пароль користувача";
             textBoxPassword.Foreground = Brushes.LightGray;
         }
 
@@ -88,7 +88,7 @@ namespace KolomyyaTrees
                 MessageBox.Show("Введіть логін користувача");
                 return;
             }
-            if (textBoxPassword.Text == "Введіть пароль користувача")
+            if (textBoxPassword.Password == "Введіть пароль користувача")
             {
                 MessageBox.Show("Введіть пароль користувача");
                 return;
@@ -102,7 +102,7 @@ namespace KolomyyaTrees
             command.Parameters.Add("@name", MySqlDbType.VarChar).Value = textBoxName.Text;
             command.Parameters.Add("@surname", MySqlDbType.VarChar).Value = textBoxSurname.Text;
             command.Parameters.Add("@login", MySqlDbType.VarChar).Value = textBoxLogin.Text;
-            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBoxPassword.Text;
+            command.Parameters.Add("@pass", MySqlDbType.VarChar).Value = textBoxPassword.Password;
 
             db.openConnection();
 
@@ -123,7 +123,7 @@ namespace KolomyyaTrees
             textBoxLogin.Text = "Введіть логін користувача";
             textBoxLogin.Foreground = Brushes.LightGray;
 
-            textBoxPassword.Text = "Введіть пароль користувача";
+            textBoxPassword.Password = "Введіть пароль користувача";
             textBoxPassword.Foreground = Brushes.LightGray;
 
             Authorization auth = new Authorization();
@@ -229,18 +229,18 @@ namespace KolomyyaTrees
 
         private void textBoxPassword_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (textBoxPassword.Text == "Введіть пароль користувача")
+            if (textBoxPassword.Password == "Введіть пароль користувача")
             {
-                textBoxPassword.Text = "";
+                textBoxPassword.Password = "";
                 textBoxPassword.Foreground = Brushes.Black;
             }
         }
 
         private void textBoxPassword_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (textBoxPassword.Text == "")
+            if (textBoxPassword.Password == "")
             {
-                textBoxPassword.Text = "Введіть пароль користувача";
+                textBoxPassword.Password = "Введіть пароль користувача";
                 textBoxPassword.Foreground = Brushes.LightGray;
             }
         }

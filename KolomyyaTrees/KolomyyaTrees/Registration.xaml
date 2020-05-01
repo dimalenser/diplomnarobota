@@ -33,7 +33,6 @@
             <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Введіть ім'я користувача" VerticalAlignment="Top" Width="440" Margin="735,156,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1" GotFocus="textBoxName_GotFocus" LostFocus="textBoxName_LostFocus"/>
             <TextBox x:Name="textBoxSurname" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Введіть прізвище користувача" VerticalAlignment="Top" Width="440" Margin="735,262,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1" GotFocus="textBoxSurname_GotFocus" LostFocus="textBoxSurname_LostFocus"/>
             <TextBox x:Name="textBoxLogin" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Введіть логін користувача" VerticalAlignment="Top" Width="440" Margin="735,368,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1" GotFocus="textBoxLogin_GotFocus" LostFocus="textBoxLogin_LostFocus"/>
-            <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="90" TextWrapping="Wrap" Text="Введіть пароль користувача" VerticalAlignment="Top" Width="440" Margin="735,475,0,0" Foreground="#FFE0E0E0" FontSize="35" FontFamily="PT Sans" Grid.Row="1" GotFocus="textBoxPassword_GotFocus" LostFocus="textBoxPassword_LostFocus"/>
             <Label Content="Я маю свій обліковий запис, я хочу" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="803,572,0,0" FontFamily="PT sans" Foreground="White" FontSize="15"/>
             <Button Content="увійти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="56" Margin="1060,575,0,0" Background="{x:Null}" BorderBrush="{x:Null}" FontStyle="Italic" FontFamily="PT sans" Foreground="#FF00D1FF" FontSize="15" Click="Button_Click"/>
             <Button x:Name="buttonRegistration" Content="Зареєструватися" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" Margin="768,623,0,0" Height="90" Background="#FF7B9F4B" Cursor="Hand" FontSize="40" FontFamily="PT Sans" Foreground="White" Click="buttonRegistration_Click"/>
@@ -43,6 +42,7 @@
             <Image Source="img/surname.png" ToolTip="Прізвище наприклад Шевченко" Cursor="Help" Margin="672,279,1182,607" />
             <Image Source="img/login.png" ToolTip="Логін наприклад taras228" Cursor="Help" Margin="672,385,1182,501" />
             <Image Source="img/password.png" ToolTip="Пароль наприклад 228" Cursor="Help" Margin="672,494,1182,392" />
+            <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Left" VerticalAlignment="Top" Width="440" Height="90" Margin="735,472,0,0" Foreground="#FFE0E0E0" Password="Введіть пароль користувача" FontSize="35" GotFocus="textBoxPassword_GotFocus" LostFocus="textBoxPassword_LostFocus"/>
         </Grid>
 
     </Grid>

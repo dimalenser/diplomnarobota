@@ -50,7 +50,6 @@
             <TextBox x:Name="TreeInfoTB" HorizontalAlignment="Left" Height="45" TextWrapping="Wrap" VerticalAlignment="Top" Width="432" Margin="415,678,0,0" FontSize="24" FontFamily="PT Sans"/>
             <Button x:Name="TreeUpdateBnt" Content="Обновити" HorizontalAlignment="Left" VerticalAlignment="Top" Width="304" Margin="136,788,0,0" Height="39" FontSize="24" FontFamily="PT Sans" Background="#FF7B9F4B" Foreground="White" Click="TreeUpdateBnt_Click"/>
             <Button x:Name="TreeRemoveBnt" Content="Видалити" HorizontalAlignment="Left" VerticalAlignment="Top" Width="306" Margin="541,788,0,0" Height="39" FontSize="24" FontFamily="PT Sans" Background="#FF7B9F4B" Foreground="White" Click="TreeRemoveBnt_Click"/>
-            <Label x:Name="labelcommand" Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top" Width="301" Margin="272,10,0,0"/>
         </Grid>
 
 

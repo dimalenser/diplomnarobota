@@ -29,9 +29,10 @@ namespace KolomyyaTrees
             textBoxLogin.Text = "Логін";
             textBoxLogin.Foreground = Brushes.LightGray;
 
-            textBoxPassword.Text = "Пароль";
+            textBoxPassword.Password = "Пароль";
             textBoxPassword.Foreground = Brushes.LightGray;
-                 
+
+
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -74,14 +75,14 @@ namespace KolomyyaTrees
                 MessageBox.Show("Введіть логін користувача");
                 return;
             }
-            if (textBoxPassword.Text == "Пароль")
+            if (textBoxPassword.Password == "Пароль")
             {
                 MessageBox.Show("Введіть пароль користувача");
                 return;
             }
 
             string loginUser = textBoxLogin.Text;
-            string passUser = textBoxPassword.Text;
+            string passUser = textBoxPassword.Password;
 
             DB db = new DB();
 
@@ -143,18 +144,18 @@ namespace KolomyyaTrees
 
         private void textBoxPassword_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (textBoxPassword.Text == "Пароль")
+            if (textBoxPassword.Password == "Пароль")
             {
-                textBoxPassword.Text = "";
+                textBoxPassword.Password = "";
                 textBoxPassword.Foreground = Brushes.Black;
             }
         }
 
         private void textBoxPassword_LostFocus(object sender, RoutedEventArgs e)
         {
-            if (textBoxPassword.Text == "")
+            if (textBoxPassword.Password == "")
             {
-                textBoxPassword.Text = "Пароль";
+                textBoxPassword.Password = "Пароль";
                 textBoxPassword.Foreground = Brushes.LightGray;
             }
         }
@@ -180,5 +181,7 @@ namespace KolomyyaTrees
             db.closeConnection();
             labelTreesKPD.Content = $"До нашої бази даних занесено {treeN - 1} дерев";
         }
+
+
     }
 }

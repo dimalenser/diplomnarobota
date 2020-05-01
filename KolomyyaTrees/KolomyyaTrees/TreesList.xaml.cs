@@ -129,6 +129,13 @@ namespace KolomyyaTrees
 
         private void TreeUpdateBnt_Click(object sender, RoutedEventArgs e)
         {
+            if (TreeIdTB.Text == "" || TreeVikTB.Text == "" || TreeStanTB.Text == "" || TreePorodaTB.Text == "" || TreePloduTB.Text == "" || TreePositionNTB.Text == "" || TreePositionETB.Text == "" || TreeInfoTB.Text == "")
+            {
+                MessageBox.Show("Ви не заповнили всі поля, заповність всі дані і повторіть спробу");
+                return;
+            }
+
+
             DateTime now = DateTime.Today;
             int nowYear = now.Year;
             float age = 0;
@@ -149,16 +156,21 @@ namespace KolomyyaTrees
 
             if (command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Дерево успішно додано в нашу базу даних");
+                MessageBox.Show("Дерево успішно відредаговано");
             }
             else
-                MessageBox.Show("Дерево не було додано в нашу базу даних");
+                MessageBox.Show("Дерево не було відредаговано");
 
             db.closeConnection();
         }
 
         private void TreeRemoveBnt_Click(object sender, RoutedEventArgs e)
         {
+            if (TreeIdTB.Text == "")
+            {
+                MessageBox.Show("Ви не вказали порядковий номер дерева яке видалити, вкажіть порядковий номер і повторіть спробу");
+                return;
+            }
             DB db = new DB();
             MySqlCommand command = new MySqlCommand("DELETE FROM `trees` WHERE `t_id` = @t_id", db.GetConnection());
             command.Parameters.Add("@t_id", MySqlDbType.VarChar).Value = TreeIdTB.Text;
@@ -166,10 +178,10 @@ namespace KolomyyaTrees
 
             if (command.ExecuteNonQuery() == 1)
             {
-                MessageBox.Show("Дерево успішно додано в нашу базу даних");
+                MessageBox.Show("Дерево успішно видалено в нашої бази даних");
             }
             else
-                MessageBox.Show("Дерево не було додано в нашу базу даних");
+                MessageBox.Show("Дерево не було видалено з бази даних");
 
             db.closeConnection();
         }
