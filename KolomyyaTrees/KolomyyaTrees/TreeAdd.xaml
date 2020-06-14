@@ -27,6 +27,7 @@
             <Button x:Name="TreesListButton" Content="Переглянути список" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="149,28,1444,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesListButton_Click"/>
             <Button x:Name="TreeAddButton" Content="Додати дерево" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="494,28,1177,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreeAddButton_Click"/>
             <Button x:Name="TreesMapButton" Content="Переглянути мапу міста" Background="{x:Null}" Foreground="White" FontFamily="PT Sans" FontSize="32" Margin="758,28,773,28" BorderBrush="{x:Null}" Cursor="Hand" Click="TreesMapButton_Click"/>
+            <CheckBox x:Name="GoogleMapsCB" Content="Включити GoogleMaps" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1512,37,0,0" FontSize="25" Background="White" Checked="GoogleMapsCB_Checked" Unchecked="GoogleMapsCB_Unchecked"/>
         </Grid>
 
         <Grid Grid.Row="1">
@@ -46,6 +47,9 @@
             <Image Source="img/plody.png" ToolTip="Плоди, наприклад яблуко" Cursor="Help" Margin="666,385,1189,502" />
             <Image Source="img/map.png" ToolTip="Координати, наприклад 1222n 4333e" Cursor="Help" Margin="665,492,1188,393" />
             <Image Source="img/info.png" ToolTip="Особливість дерева, наприклад під цим деревом був похований..." Cursor="Help" Margin="666,601,1189,287" />
+            
+            
+            <WebBrowser x:Name="GoogleMapsWB" HorizontalAlignment="Left" Height="880" VerticalAlignment="Top" Width="1820" Margin="49,10,0,0" />
 
         </Grid>
 
