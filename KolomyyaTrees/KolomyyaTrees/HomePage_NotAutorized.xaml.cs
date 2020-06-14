@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data;
+using System.Media;
 
 namespace KolomyyaTrees
 {
@@ -26,6 +27,10 @@ namespace KolomyyaTrees
             InitializeComponent();
             labelTreeCountUpdate();
         }
+
+
+
+
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
@@ -87,6 +92,17 @@ namespace KolomyyaTrees
             reader.Close();
             db.closeConnection();
             labelTreesKPD.Content = $"До нашої бази даних занесено {treeN - 1} дерев";
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //playaudio(); // calling the function
+        }
+
+        private void playaudio() // defining the function
+        {
+            SoundPlayer audio = new SoundPlayer(Properties.Resources.music); // here WindowsFormsApplication1 is the namespace and Connect is the audio file name
+            audio.Play();
         }
     }
 }

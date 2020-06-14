@@ -100,7 +100,7 @@ namespace KolomyyaTrees
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM Trees ORDER BY t_id", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM trees ORDER BY t_id", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -129,7 +129,7 @@ namespace KolomyyaTrees
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM Trees WHERE t_info = 'Немає' ORDER BY t_id", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM trees WHERE t_info = 'Немає' ORDER BY t_id", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -158,7 +158,7 @@ namespace KolomyyaTrees
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM Trees WHERE t_info != 'Немає' ORDER BY t_id", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM trees WHERE t_info != 'Немає' ORDER BY t_id", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();

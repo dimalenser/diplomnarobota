@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:KolomyyaTrees"
         mc:Ignorable="d"
         Title="HomePage_NotAutorized" Height="1080" Width="1920" Background="White"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="img/background1.png"></ImageBrush>

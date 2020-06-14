@@ -24,7 +24,7 @@ namespace KolomyyaTrees
         public TreesList()
         {
             InitializeComponent();
-
+            UpdateGrid();
             labelTreeCountUpdate();
         }
 
@@ -84,16 +84,14 @@ namespace KolomyyaTrees
         }
 
         //Добавим информацию в таблицу
-        private void grid_Loaded(object sender, RoutedEventArgs e)
+        public void UpdateGrid()
         {
-            
-            InitializeComponent();
 
             DB db = new DB();
 
             DataTable table = new DataTable();
 
-            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM Trees ORDER BY t_id", db.GetConnection());
+            MySqlCommand command = new MySqlCommand("SELECT t_id, t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info FROM trees ORDER BY t_id", db.GetConnection());
             db.openConnection();
 
             MySqlDataReader reader = command.ExecuteReader();
@@ -111,15 +109,14 @@ namespace KolomyyaTrees
                 treeVikInStr = $"{reader[1]}";
                 age = nowYear - float.Parse(treeVikInStr);
                 // выводим данные столбцов текущей строки в listBox1
-                
+
                 result.Add(new MyTable(number, age, $"{reader[2].ToString()}", $"{reader[3].ToString()}", $"{reader[4].ToString()}", $"{reader[5].ToString()}", $"{reader[6].ToString()}", $"{reader[7].ToString()}"));
             }
             grid.ItemsSource = result;
             reader.Close();
             db.closeConnection();
-            
-        }
 
+        }
         private void TreeSearch_Click(object sender, RoutedEventArgs e)
         {
             TreeSearch trsearch = new TreeSearch();
@@ -162,6 +159,7 @@ namespace KolomyyaTrees
                 MessageBox.Show("Дерево не було відредаговано");
 
             db.closeConnection();
+            UpdateGrid();
         }
 
         private void TreeRemoveBnt_Click(object sender, RoutedEventArgs e)
@@ -184,6 +182,21 @@ namespace KolomyyaTrees
                 MessageBox.Show("Дерево не було видалено з бази даних");
 
             db.closeConnection();
+            UpdateGrid();
+        }
+
+
+        private void grid_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            MyTable path = grid.SelectedItem as MyTable;
+            TreeIdTB.Text = $"{path.t_id}";
+            TreeVikTB.Text = $"{path.t_vik}";
+            TreeStanTB.Text = $"{path.t_stan}";
+            TreePorodaTB.Text = $"{path.t_poroda}";
+            TreePloduTB.Text = $"{path.t_plodu}";
+            TreePositionNTB.Text = $"{path.t_positionN}";
+            TreePositionETB.Text = $"{path.t_positionE}";
+            TreeInfoTB.Text = $"{path.t_info}";
         }
     }
 }

@@ -228,6 +228,8 @@
     <Resource Include="img\info.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="music.wav" />
+    <EmbeddedResource Include="treeAddSound.wav" />
     <Resource Include="html\client1.png" />
     <Resource Include="html\down2.png" />
     <Content Include="html\map.html" />
