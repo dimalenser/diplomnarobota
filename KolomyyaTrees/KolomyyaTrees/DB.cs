@@ -9,7 +9,9 @@ namespace KolomyyaTrees
 {
     class DB
     {
-        MySqlConnection connection = new MySqlConnection("server=localhost; port=3306;username=root;password=;database=treesbase;charset=utf8");
+        MySqlConnection connection = new MySqlConnection("server=141.8.192.31; port=3306;username=a0446855_dimalenser; password=dimatreesadmin; database=a0446855_treesbase;charset=utf8");
+        //server=localhost; port=3306;username=root;password=;database=treesbase;charset=utf8 локалка
+        //server=141.8.192.31; port=3306;username=a0446855_dimalenser; password=dimatreesadmin; database=a0446855_treesbase;charset=utf8 сервер
 
         public void openConnection()
         {
