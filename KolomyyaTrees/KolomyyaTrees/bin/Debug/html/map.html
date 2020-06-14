@@ -60,37 +60,21 @@
             ({
                 position: latLng,
                 icon: waipointicon,
-                draggable: true,
                 animation: google.maps.Animation.DROP,
-                title: "Клікніть по мітці, щоб переглянути інформацію"
+                title: t_poroda +
+            '\nВік '+ t_vik +
+            '\nСтан '+ t_stan +
+            '\nПлоди '+ t_plodu +
+            '\nКоординати '+ t_positionN + ', ' +t_positionE+
+            '\nДадаткова інформація '+ t_info 
             });
         markers.push(marker);
         marker.setMap(map);
+
         google.maps.event.addListener(marker, 'click', function () {
             infowindow.open(map, marker);
-            if (marker.getAnimation() != null) {
-                marker.setAnimation(null);
-            }
-            else {
-                marker.setAnimation(google.maps.Animation.DROP);
-            }
-        });
-        //add the Drag end event to send the dragEvent to cs
-        google.maps.event.addListener(marker, 'dragend', function () {
-            eventEndDragMarker(marker)
-        });
+            });
 
-    }
-
-
-    function eventEndDragMarker(shape) {
-        var pos = new google.maps.LatLng;
-        pos = shape.getPosition();
-        endDragMarkerCS(pos.lat(), pos.lng());
-    }
-
-    function endDragMarkerCS(lat, long) {
-        window.external.endDragMarkerCS(lat, long);
     }
 </script>
   
