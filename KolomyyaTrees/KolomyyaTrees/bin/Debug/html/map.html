@@ -27,20 +27,41 @@
     </style>
 <script type="text/javascript" src="http://maps.google.com.mx/maps/api/js?sensor=true&language=ua&key=AIzaSyCmYSlTF2VxgBY5f9AVG2TQyIHtEBhECmU"></script>
 <script type="text/javascript">
+    
+
     var map;
     var markers = [];
-    function initialize() {
+    function initialize() { 
         map = new google.maps.Map(document.getElementById('map_canvas'),
             {
                 zoom: 15,
                 center: new google.maps.LatLng(48.530133, 25.040701),
                 mapTypeId: google.maps.MapTypeId.SATELLITE,
-                disableDefaultUI: true,
-                zoomControl: true
+                disableDefaultUI: false,
+                zoomControl: true,
+                styles: [ //зробити другий стиль карти можна тут https://mapstyle.withgoogle.com/
+                      {
+                        "featureType": "poi.business",
+                        "stylers": [
+                          {
+                            "visibility": "off"
+                          }
+                        ]
+                      },
+                      {
+                        "featureType": "poi.park",
+                        "elementType": "labels.text",
+                        "stylers": [
+                          {
+                            "visibility": "off"
+                          }
+                        ]
+                      }
+                    ]
             });
     }
 
-    function addMarker(t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info) {
+    function addMarker(t_vik, t_stan, t_poroda, t_plodu, t_positionN, t_positionE, t_info) { //Функція додавання маркера
         var latLng = new google.maps.LatLng(t_positionN, t_positionE);
         var contentString = '<div id="content">' +
             '<h1>' + t_poroda + '</h1>' +
@@ -49,8 +70,8 @@
             '<br/>Плоди '+ t_plodu +
             '<br/>Координати '+ t_positionN + ', ' +t_positionE+
             '<br/>Дадаткова інформація '+ t_info +
-            '</div>';
-        var infowindow = new google.maps.InfoWindow({ content: contentString });
+            '<br/><a href="http://a0446855.xsph.ru?'+t_positionN+'&'+t_positionE+'">Прокласти маршрут</a></div>';
+        
         var waipointicon="waypoint2.png";
         if(t_info == "Немає")
                 {
@@ -71,11 +92,23 @@
         markers.push(marker);
         marker.setMap(map);
 
-        google.maps.event.addListener(marker, 'click', function () {
-            infowindow.open(map, marker);
-            });
+        
+
+        makeInfoWin(marker, contentString, map); //виклик функції виводу інформації про маркер
+
 
     }
+
+    function makeInfoWin(marker, contentString, map) {  // функція яка виводить інформацію про маркер
+
+          var infowindow = new google.maps.InfoWindow({ content: contentString });
+
+          google.maps.event.addListener(marker, 'click', function() {
+
+            infowindow.open(map,marker);
+
+          });  
+        }
 </script>
   
 </head>
