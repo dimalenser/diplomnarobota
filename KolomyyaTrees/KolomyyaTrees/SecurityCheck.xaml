@@ -7,7 +7,16 @@
         mc:Ignorable="d"
         Title="SecurityCheck" Height="450" Width="800">
     <Grid>
-        <Label Content="Буде реалізовано в дипломній роботі" HorizontalAlignment="Left" Margin="253,171,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="83*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background2blurMore.png"></ImageBrush>
+        </Grid.Background>
+        <Label Content="Введіть пароль адміністратора" HorizontalAlignment="Left" Margin="150,192,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="222,241,0,0" Grid.Column="1" Click="Button_Click"/>
+        <PasswordBox x:Name="passBox" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="1" Margin="222,218,0,0" Width="62"/>
 
     </Grid>
 </Window>

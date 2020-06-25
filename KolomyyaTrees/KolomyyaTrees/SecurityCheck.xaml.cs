@@ -23,5 +23,18 @@ namespace KolomyyaTrees
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(passBox.Password=="04052001")
+            {
+                MessageBox.Show("Пароль введено вірно, ви можете провести реєстрацію користувача");
+                Registration reg = new Registration();
+                reg.Show();
+                Close();
+            }
+            MessageBox.Show("Пароль введено невірно, попробуйте ще раз");
+            return;
+        }
     }
 }
