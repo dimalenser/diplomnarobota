@@ -228,6 +228,7 @@
     <Resource Include="img\info.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="img\fingerprint.png" />
     <EmbeddedResource Include="music.wav" />
     <EmbeddedResource Include="treeAddSound.wav" />
     <Resource Include="html\client1.png" />

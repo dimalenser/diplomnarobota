@@ -36,6 +36,9 @@ namespace KolomyyaTrees
 
             textBoxPassword.Password = "Введіть пароль користувача";
             textBoxPassword.Foreground = Brushes.LightGray;
+
+            adminPassBox.Password = "Введіть пароль адміністратора";
+            adminPassBox.Foreground = Brushes.LightGray;
         }
 
         private void homeButton_Click(object sender, RoutedEventArgs e)
@@ -73,6 +76,11 @@ namespace KolomyyaTrees
 
         private void buttonRegistration_Click(object sender, RoutedEventArgs e)
         {
+            if(adminPassBox.Password != "04052001")
+            {
+                MessageBox.Show("Пароль адміністратора введено не вірно, вам заборонено реєстрацію нового користувача.\nВведіть пароль адміністратора ще раз і повторіть спробу.");
+                return;
+            }
             if (textBoxName.Text == "Введіть ім'я користувача")
             {
                 MessageBox.Show("Введіть ім'я користувача");
@@ -265,6 +273,24 @@ namespace KolomyyaTrees
             reader.Close();
             db.closeConnection();
             labelTreesKPD.Content = $"До нашої бази даних занесено {treeN - 1} дерев";
+        }
+
+        private void adminPassBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (adminPassBox.Password == "Введіть пароль адміністратора")
+            {
+                adminPassBox.Password = "";
+                adminPassBox.Foreground = Brushes.Black;
+            }
+        }
+
+        private void adminPassBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (adminPassBox.Password == "")
+            {
+                adminPassBox.Password = "Введіть пароль адміністратора";
+                adminPassBox.Foreground = Brushes.LightGray;
+            }
         }
     }
 }
